@@ -9,6 +9,7 @@ module.exports = {
       'Orange-500': '#f97316',
       'Orange-400': '#fb923c',
       'Orange-300': '#fdba74',
+      'Orange-200':'#FC5858',
       'Orange-100': '#ffedd5',
       'Slate-900': '#0f172a',
       'Slate-800': '#1e293b',
