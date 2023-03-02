@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rangeSliderRange::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #FC5858;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+}
+
+.rangeSliderRange::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background: #FC5858;
+}
+
+.rangeSliderValue:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    background: #fdba74;
+}
+

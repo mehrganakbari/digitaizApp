@@ -180,3 +180,33 @@ for (let i = 0; i < filterBtn.length; i++) {
     badge[i].classList.toggle("hidden");
   });
 }
+
+const FilterBtn = document.querySelectorAll(".FilterBtn");
+const filterItems = document.querySelectorAll(".filterItems");
+const chevrown = document.querySelectorAll(".chevrown");
+
+for (let i = 0; i < FilterBtn.length; i++) {
+  FilterBtn[i].addEventListener("click", () => {
+    filterItems[i].classList.toggle("hidden");
+    filterItems[i].classList.toggle("transition-all");
+    filterItems[i].classList.toggle("duration-1000");
+    chevrown[i].classList.toggle("rotate-0");
+  });
+}
+
+let slider = document.querySelector(".rangeSliderRange");
+let output = document.querySelector(".rangeSliderValue");
+
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+  output.innerHTML = this.value;
+
+  let value = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background =
+    "linear-gradient(to left, #fdba74 0%, #FC5858 " +
+    value +
+    "%, #d7dcdf " +
+    value +
+    "%, #d7dcdf 100%)";
+};
