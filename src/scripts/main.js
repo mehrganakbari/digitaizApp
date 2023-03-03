@@ -15,6 +15,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch8.png",
     category: "smartWatch",
     price: "۱۹,۹۰۰,۰۰۰",
+    star: "3",
+    colors: "",
   },
 
   {
@@ -22,6 +24,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch7.png",
     category: "smartWatch",
     price: "۱۴,۶۹۹,۰۰۰",
+    star: "5",
+    colors: "",
   },
 
   {
@@ -29,6 +33,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch6.png",
     category: "smartWatch",
     price: "۱۴,۳۰۰,۰۰۰",
+    star: "4",
+    colors: "",
   },
 
   {
@@ -36,6 +42,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch5.png",
     category: "smartWatch",
     price: "۱۳,۷۹۰,۰۰۰",
+    star: "3",
+    colors: "",
   },
 
   {
@@ -43,6 +51,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch4.png",
     category: "smartWatch",
     price: "۱۲,۹۹۹,۰۰۰",
+    star: "4",
+    colors: "",
   },
 
   {
@@ -50,6 +60,8 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch3.png",
     category: "smartWatch",
     price: "۹,۳۹۰,۰۰۰",
+    star: "2",
+    colors: "",
   },
 
   {
@@ -57,6 +69,8 @@ var products = [
     image: "/assets/images/img/Cart/mobile/1.png",
     category: "mobile",
     price: "۵۸,۳۵,۰۰۰",
+    star: "5",
+    colors: "",
   },
 
   {
@@ -64,6 +78,8 @@ var products = [
     image: "/assets/images/img/Cart/mobile/2.png",
     category: "mobile",
     price: "۴۶,۶۶۰,۰۰۰",
+    star: "4.5",
+    colors: "",
   },
 
   {
@@ -71,6 +87,8 @@ var products = [
     image: "/assets/images/img/Cart/mobile/3.png",
     category: "mobile",
     price: "۵۸,۶۱۰,۰۰۰",
+    star: "4",
+    colors: "",
   },
 
   {
@@ -78,12 +96,16 @@ var products = [
     image: "/assets/images/img/Cart/mobile/4.png",
     category: "mobile",
     price: "۴۰,۱۵۰,۰۰۰",
+    star: "4.5",
+    colors: "",
   },
   {
     title: "۱۱ گوشی موبایل آیفون",
     image: "/assets/images/img/Cart/mobile/5.png",
     category: "mobile",
     price: "۳۸,۰۰۰,۰۰۰",
+    star: "v",
+    colors: "",
   },
 
   {
@@ -91,6 +113,8 @@ var products = [
     image: "/assets/images/img/Cart/mobile/6.png",
     category: "mobile",
     price: "۳۶,۰۰۰,۰۰۰",
+    star: "3.5",
+    colors: "",
   },
 
   {
@@ -98,12 +122,16 @@ var products = [
     image: "/assets/images/img/Cart/laptop/macpro.png",
     category: "laptop",
     price: "۷۸,۷۵۰,۰۰۰",
+    star: "5",
+    colors: "",
   },
   {
     title: "مک بوک ام ۱۱ ایر",
     image: "/assets/images/img/Cart/laptop/macm11.png",
     category: "laptop",
     price: "۱۱۰,۹۹۰,۰۰۰",
+    star: "5",
+    colors: "",
   },
 ];
 
@@ -112,7 +140,7 @@ let cards = "";
 products.forEach((products) => {
   if (products.category == "mobile") {
     let cardstemplate = `
-      <div class="bg-Stone-50 rounded-xl p-2 shadow">
+      <div class="index bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.price}" data-index="${products.star}">
           <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
             <img src="${products.image}" alt="" class="w-48 mx-auto">
           </div>
@@ -136,7 +164,7 @@ products.forEach((products) => {
   }
   if (products.category == "laptop") {
     let cardstemplate = `
-    <div class="relative bg-Stone-50 rounded-xl p-2 shadow">
+    <div class="index relative bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.price}" data-index="${products.star}">
       <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
         <img src="${products.image}" alt="" class="w-48 mx-auto">
       </div>
@@ -194,6 +222,7 @@ for (let i = 0; i < FilterBtn.length; i++) {
   });
 }
 
+// range slider
 let slider = document.querySelector(".rangeSliderRange");
 let output = document.querySelector(".rangeSliderValue");
 
@@ -209,4 +238,57 @@ slider.oninput = function () {
     "%, #d7dcdf " +
     value +
     "%, #d7dcdf 100%)";
+};
+
+// main sort -> mostPopular
+const mostPopularBtn = document.querySelector(".mostPopularBtn");
+
+function comparatorStar(a, b) {
+  if (a.dataset.index < b.dataset.index) {
+    return -1;
+  }
+  if (a.dataset.index > b.dataset.index) {
+    return 1;
+  }
+  return 0;
+}
+
+mostPopularBtn.onclick = function () {
+  var products = document.querySelectorAll("[data-index]");
+  var productsArray = Array.from(products);
+  let sorted = productsArray.sort(comparatorStar);
+  sorted.forEach((event) =>
+    document.querySelector("#productBox").appendChild(event)
+  );
+};
+
+// main sort -> bestselling
+const bestsellingBtn = document.querySelector(".bestsellingBtn");
+
+bestsellingBtn.onclick = function () {
+  location.reload(document.querySelector("#productBox"));
+};
+
+// main sort -> cheapest
+const cheapestBtn = document.querySelector(".cheapestBtn");
+
+cheapestBtn.onclick = function () {
+  function comparatorPrice(a, b) {
+    if (a.dataset.price < b.dataset.price) {
+      return 1;
+    }
+    if (a.dataset.price > b.dataset.price) {
+      return -1;
+    }
+    return 0;
+  }
+
+  mostPopularBtn.onclick = function () {
+    var products = document.querySelectorAll("[data-price]");
+    var productsArray = Array.from(products);
+    let sorted = productsArray.sort(comparatorPrice);
+    sorted.forEach((ev) =>
+      document.querySelector("#productBox").appendChild(ev)
+    );
+  };
 };
