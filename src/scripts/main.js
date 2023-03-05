@@ -15,8 +15,9 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch8.png",
     category: "smartWatch",
     price: "۱۹,۹۰۰,۰۰۰",
-    star: "3",
-    colors: "",
+    priceEng: 199000000,
+    star: 3,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -24,8 +25,9 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch7.png",
     category: "smartWatch",
     price: "۱۴,۶۹۹,۰۰۰",
-    star: "5",
-    colors: "",
+    priceEng: 14699000,
+    star: 5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -33,8 +35,9 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch6.png",
     category: "smartWatch",
     price: "۱۴,۳۰۰,۰۰۰",
-    star: "4",
-    colors: "",
+    priceEng: 14300000,
+    star: 4,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -42,8 +45,9 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch5.png",
     category: "smartWatch",
     price: "۱۳,۷۹۰,۰۰۰",
-    star: "3",
-    colors: "",
+    priceEng: 13790000,
+    star: 3,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -51,8 +55,9 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch4.png",
     category: "smartWatch",
     price: "۱۲,۹۹۹,۰۰۰",
-    star: "4",
-    colors: "",
+    priceEng: 12999000,
+    star: 4,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -60,17 +65,19 @@ var products = [
     image: "/assets/images/img/Cart/watch/watch3.png",
     category: "smartWatch",
     price: "۹,۳۹۰,۰۰۰",
-    star: "2",
-    colors: "",
+    priceEng: 9390000,
+    star: 2,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
     title: " گوشی موبایل آیفون ۱۳",
     image: "/assets/images/img/Cart/mobile/1.png",
     category: "mobile",
-    price: "۵۸,۳۵,۰۰۰",
-    star: "5",
-    colors: "",
+    price: "۵۸,۳۵۰,۰۰۰",
+    priceEng: 58350000,
+    star: 5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -78,8 +85,9 @@ var products = [
     image: "/assets/images/img/Cart/mobile/2.png",
     category: "mobile",
     price: "۴۶,۶۶۰,۰۰۰",
-    star: "4.5",
-    colors: "",
+    priceEng: 46660000,
+    star: 4.5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -87,8 +95,9 @@ var products = [
     image: "/assets/images/img/Cart/mobile/3.png",
     category: "mobile",
     price: "۵۸,۶۱۰,۰۰۰",
-    star: "4",
-    colors: "",
+    priceEng: 58610000,
+    star: 4,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -96,16 +105,18 @@ var products = [
     image: "/assets/images/img/Cart/mobile/4.png",
     category: "mobile",
     price: "۴۰,۱۵۰,۰۰۰",
-    star: "4.5",
-    colors: "",
+    priceEng: 40150000,
+    star: 4.5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
   {
     title: "۱۱ گوشی موبایل آیفون",
     image: "/assets/images/img/Cart/mobile/5.png",
     category: "mobile",
     price: "۳۸,۰۰۰,۰۰۰",
-    star: "v",
-    colors: "",
+    priceEng: 38000000,
+    star: 4,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -113,8 +124,9 @@ var products = [
     image: "/assets/images/img/Cart/mobile/6.png",
     category: "mobile",
     price: "۳۶,۰۰۰,۰۰۰",
-    star: "3.5",
-    colors: "",
+    priceEng: 36000000,
+    star: 3.5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 
   {
@@ -122,16 +134,18 @@ var products = [
     image: "/assets/images/img/Cart/laptop/macpro.png",
     category: "laptop",
     price: "۷۸,۷۵۰,۰۰۰",
-    star: "5",
-    colors: "",
+    priceEng: 78750000,
+    star: 5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
   {
     title: "مک بوک ام ۱۱ ایر",
     image: "/assets/images/img/Cart/laptop/macm11.png",
     category: "laptop",
     price: "۱۱۰,۹۹۰,۰۰۰",
-    star: "5",
-    colors: "",
+    priceEng: 110990000,
+    star: 5,
+    colors: ["red", "white", "yellow", "purple", "orange"],
   },
 ];
 
@@ -140,7 +154,7 @@ let cards = "";
 products.forEach((products) => {
   if (products.category == "mobile") {
     let cardstemplate = `
-      <div class="index bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.price}" data-index="${products.star}">
+      <div class="index bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
           <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
             <img src="${products.image}" alt="" class="w-48 mx-auto">
           </div>
@@ -164,7 +178,7 @@ products.forEach((products) => {
   }
   if (products.category == "laptop") {
     let cardstemplate = `
-    <div class="index relative bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.price}" data-index="${products.star}">
+    <div class="index relative bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
       <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
         <img src="${products.image}" alt="" class="w-48 mx-auto">
       </div>
@@ -256,10 +270,13 @@ function comparatorStar(a, b) {
 mostPopularBtn.onclick = function () {
   var products = document.querySelectorAll("[data-index]");
   var productsArray = Array.from(products);
+  console.log(productsArray);
   let sorted = productsArray.sort(comparatorStar);
-  sorted.forEach((event) =>
-    document.querySelector("#productBox").appendChild(event)
-  );
+  console.log(sorted);
+
+  // sorted.forEach((event) =>
+  //   document.querySelector("#productBox").appendChild(event)
+  // );
 };
 
 // main sort -> bestselling
