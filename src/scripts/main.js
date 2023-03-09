@@ -309,3 +309,9 @@ cheapestBtn.onclick = function () {
     );
   };
 };
+
+const toggleDarkModeBtn = document.getElementById('toggleDarkMode');
+
+toggleDarkModeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark')
+});
