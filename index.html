@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,11 +9,11 @@
   <title>DIGITAIZE APP</title>
 </head>
 
-<body class="yekan bg-lite transition-all duration-300 dark:bg-Slate-700">
+<body class="yekan bg-lite transition-all duration-300 dark:bg-Slate-800">
   <!-- navbar -->
   <header>
     <!-- navbar -> desktop -->
-    <nav class="fixed z-50 top-0 left-0 right-0 bg-Stone-50 py-3 shadow hidden md:block">
+    <nav class="fixed z-50 top-0 left-0 right-0 bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 shadow hidden md:block">
       <div class="mx-auto container py-1 px-5 max-w-[1500px]">
         <div class="flex justify-between items-center">
           <!-- logo -->
@@ -26,7 +26,7 @@
             </svg>
           </div>
           <!-- links -->
-          <ul class="flex gap-2 text-Slate-800 text-sm">
+          <ul class="flex gap-2 text-Slate-800 dark:text-lite text-sm">
             <button class="home px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">خانه</button>
             <button class="mobile px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">تلفن
               همراه</button>
@@ -79,7 +79,7 @@
           </svg>
         </div>
         <!-- title -->
-        <p class="home text-lg">خانه</p>
+        <p class="home text-lg transition-all duration-300 dark:text-lite">خانه</p>
         <!-- search button -->
         <button class="mobileSearchBtn bg-Stone-50 p-2 rounded-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
@@ -357,6 +357,28 @@
     </aside>
     <!-- main content -->
     <main class="col-span-12 md:col-span-8 xl:col-span-9 2xl:col-span-10">
+      <section class="bg-Stone-50 py-3 rounded-lg mb-4 flex justify-between px-5 md:hidden">
+        <div class="w-full">dark mode</div>
+        <!-- toggle -->
+        <div class="flex items-center justify-center">
+          <label for="toggleDarkMode" class="flex items-center cursor-pointer">
+            <!-- toggle -->
+            <div class="relative">
+              <!-- input -->
+              <input id="toggleDarkMode" type="checkbox" class="sr-only">
+              <!-- line -->
+              <div class="w-8 h-3 bg-Gray-200 rounded-full shadow-inner"></div>
+              <!-- dot -->
+              <div class="dot absolute w-5 h-5 bg-Gray-200 rounded-full shadow -left-1 -top-1 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mx-auto my-1 text-Orange-200">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                </svg>
+                
+              </div>
+            </div>
+          </label>
+        </div>
+      </section>
       <section class="bg-Stone-50 py-5 rounded-lg hidden md:grid grid-cols-4 xl:grid-cols-5 text-Gray-300 ">
         <button
           class="bestsellingBtn filterBtn relative transition-all duration-300  mx-5 text-sm font-bold text-Slate-800">

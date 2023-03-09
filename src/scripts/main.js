@@ -154,23 +154,23 @@ let cards = "";
 products.forEach((products) => {
   if (products.category == "mobile") {
     let cardstemplate = `
-      <div class="index bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
-          <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
+      <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
+          <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
             <img src="${products.image}" alt="" class="w-48 mx-auto">
           </div>
           <div class="flex items-center justify-between w-full mb-4">
-          <span class="text-Slate-700 text-xs">اپل</span>
+          <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
           <div class="flex items-center">
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
           </div>
         </div>
-        <div class="text-Slate-800 text-xs mb-2 md:text-base">${products.title}</div>
+        <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
         <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
-        <hr class="">
+        <hr class=" transition-all duration-300 dark:text-Slate-700">
         <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
       </div>
     `;
@@ -178,21 +178,21 @@ products.forEach((products) => {
   }
   if (products.category == "laptop") {
     let cardstemplate = `
-    <div class="index relative bg-Stone-50 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
-      <div class="mb-6 bg-Gray-200 rounded-xl pb-7 items-center">
+    <div class="index relative bg-Stone-50 transition-all duration-300 dark:bg-Slate-900  rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
+      <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700  rounded-xl pb-7 items-center">
         <img src="${products.image}" alt="" class="w-48 mx-auto">
       </div>
       <div class="flex items-center justify-between w-full mb-4">
-          <span class="text-Slate-700 text-xs">اپل</span>
+          <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
           <div class="flex items-center">
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
+          <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
           </div>
       </div>
-      <div class="text-Slate-800 text-xs mb-2 md:text-base">${products.title}</div>
+      <div class="text-Slate-800 text-xs mb-2 md:text-base transition-all duration-300 dark:text-lite">${products.title}</div>
       <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
       <div class="w-full 2xl:absolute bottom-3">
       <hr class="ml-4">
@@ -310,8 +310,8 @@ cheapestBtn.onclick = function () {
   };
 };
 
-const toggleDarkModeBtn = document.getElementById('toggleDarkMode');
+const toggleDarkModeBtn = document.getElementById("toggleDarkMode");
 
-toggleDarkModeBtn.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark')
+toggleDarkModeBtn.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
 });
