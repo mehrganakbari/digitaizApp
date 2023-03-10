@@ -315,3 +315,15 @@ const toggleDarkModeBtn = document.getElementById("toggleDarkMode");
 toggleDarkModeBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
 });
+
+const mobileCategoryBtn = document.querySelectorAll(".mobileCategoryBtn");
+const mobileCategoryTitle = document.querySelectorAll(".mobileCategoryTitle");
+
+for (let i = 0; i < mobileCategoryBtn.length; i++) {
+  mobileCategoryBtn[i].addEventListener("click", () => {
+    for (let i = 0; i < mobileCategoryBtn.length; i++) {
+      mobileCategoryTitle[i].classList.add("hidden");
+    }
+    mobileCategoryTitle[i].classList.toggle("hidden");
+  });
+}
