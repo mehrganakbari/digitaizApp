@@ -170,7 +170,7 @@ products.forEach((products) => {
         </div>
         <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
         <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
-        <hr class=" transition-all duration-300 dark:text-Slate-700">
+        <hr class="transition-all duration-300 dark:text-Slate-700">
         <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
       </div>
     `;
@@ -195,7 +195,7 @@ products.forEach((products) => {
       <div class="text-Slate-800 text-xs mb-2 md:text-base transition-all duration-300 dark:text-lite">${products.title}</div>
       <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
       <div class="w-full 2xl:absolute bottom-3">
-      <hr class="ml-4">
+      <hr class="ml-4 transition-all duration-300 dark:text-Slate-700">
       <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
       </div>
     </div>
@@ -214,11 +214,13 @@ for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", () => {
     for (let i = 0; i < filterBtn.length; i++) {
       filterBtn[i].classList.remove("text-Slate-800");
+      filterBtn[i].classList.remove("dark:text-lite");
       filterBtn[i].classList.remove("font-bold");
       badge[i].classList.add("hidden");
     }
     filterBtn[i].classList.toggle("font-bold");
     filterBtn[i].classList.toggle("text-Slate-800");
+    filterBtn[i].classList.toggle("dark:text-lite");
     badge[i].classList.toggle("hidden");
   });
 }
@@ -232,7 +234,7 @@ for (let i = 0; i < FilterBtn.length; i++) {
     filterItems[i].classList.toggle("hidden");
     filterItems[i].classList.toggle("transition-all");
     filterItems[i].classList.toggle("duration-1000");
-    chevrown[i].classList.toggle("rotate-0");
+    chevrown[i].classList.toggle("rotate-180");
   });
 }
 
@@ -247,7 +249,7 @@ slider.oninput = function () {
 
   let value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
-    "linear-gradient(to left, #fdba74 0%, #FC5858 " +
+    "linear-gradient(to left, #fdba74 1%, #FC5858 " +
     value +
     "%, #d7dcdf " +
     value +
@@ -266,7 +268,7 @@ function comparatorStar(a, b) {
   }
   return 0;
 }
-
+// اینجا باگش رفع شد یه تیکه کدو دوباره نوشتم یه کم ایراد داشت
 mostPopularBtn.onclick = function () {
   var products = document.querySelectorAll("[data-index]");
   var productsArray = Array.from(products);
@@ -274,19 +276,16 @@ mostPopularBtn.onclick = function () {
   let sorted = productsArray.sort(comparatorStar);
   console.log(sorted);
 
-  // sorted.forEach((event) =>
-  //   document.querySelector("#productBox").appendChild(event)
-  // );
+  sorted.forEach((event) =>
+    document.querySelector("#productBox").appendChild(event)
+  );
 };
 
 // main sort -> bestselling
-const bestsellingBtn = document.querySelector(".bestsellingBtn");
-
-bestsellingBtn.onclick = function () {
-  location.reload(document.querySelector("#productBox"));
-};
+// اینو باید چی کنم برگرده به حالت اول  بدون ریلود شدن پیج
 
 // main sort -> cheapest
+// این همو کدیه که کار نمیکنه
 const cheapestBtn = document.querySelector(".cheapestBtn");
 
 cheapestBtn.onclick = function () {
@@ -310,6 +309,7 @@ cheapestBtn.onclick = function () {
   };
 };
 
+// dark mode
 const toggleDarkModeBtn = document.getElementById("toggleDarkMode");
 
 toggleDarkModeBtn.addEventListener("click", () => {

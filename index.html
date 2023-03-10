@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="dark">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
             </button>
             <input type="text" name="searchInput" id="searchInput"
               placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
-              class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
+              class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:dark:text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
           </div>
         </div>
         <!-- search box -->
@@ -55,7 +55,7 @@
             </svg>
           </button>
           <input type="text" name="searchInput" id="searchInput" placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
-            class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
+            class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:dark:text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
         </div>
       </div>
     </nav>
@@ -97,7 +97,7 @@
             </svg>
           </button>
           <input type="text" name="searchInput" id="searchInput" placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
-            class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
+            class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 placeholder:dark:text-Slate-700  dark:text-slate-7 focus:outline-none">
         </div>
       </div>
       <!-- buttons -->
@@ -135,11 +135,11 @@
     </nav>
   </header>
   <!-- content -> desktop -->
-  <section class="md:mt-40 xl:mt-24 md:mb-7 grid grid-cols-12 md:gap-7 px-7 mx-auto container py-1 max-w-[1500px]">
+  <section class="md:mt-40 xl:mt-24 md:mb-7 grid grid-cols-12 md:gap-7 px-5 md:px-7 mx-auto container py-1 max-w-[1500px]">
     <!-- sidebar -->
     <aside class="hidden md:block col-span-4 xl:col-span-3 2xl:col-span-2">
-      <section class="bg-Stone-50 py-3 rounded-lg mb-4 flex justify-between px-5">
-        <div class="w-full">dark mode</div>
+      <section class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 rounded-lg mb-4 flex justify-between px-5">
+        <div class="w-full transition-all duration-300 dark:text-lite text-xs">حالت شب</div>
         <!-- toggle -->
         <div class="flex items-center justify-center">
           <label for="toggleDarkMode" class="flex items-center cursor-pointer">
@@ -162,20 +162,20 @@
       </section>
       <!-- filter -->
       <section
-        class="bg-Stone-50 py-5 rounded-lg h-[450px] overflow-y-scroll scrollbar-thin scrollbar-thumb-Orange-200">
+        class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-5 rounded-lg h-[450px] overflow-y-scroll scrollbar-thin scrollbar-thumb-Orange-200">
         <!-- category -->
-        <p class="text-Orange-200 font-bold text-xl px-3">دسته بندی</p>
+        <p class="text-Orange-200 font-bold text-lg px-3">دسته بندی</p>
         <!-- mobile -->
         <button id="mobileBtn" class="flex gap-2 mx-4 my-2 items-center">
           <span class="p-2 bg-Stone-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" fill="none">
               <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
                 d="M13 5.205v7.547c0 3.02-.75 3.774-3.75 3.774h-4.5c-3 0-3.75-.755-3.75-3.774V5.205c0-3.02.75-3.774 3.75-3.774h4.5c3 0 3.75.755 3.75 3.774ZM8.5 4.073h-3" />
               <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
                 d="M7 14.337c.642 0 1.162-.524 1.162-1.17 0-.646-.52-1.17-1.162-1.17-.642 0-1.163.524-1.163 1.17 0 .646.52 1.17 1.163 1.17Z" />
             </svg>
           </span>
-          <span class="text-xs text-Slate-700">تلفن همراه</span>
+          <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">تلفن همراه</span>
         </button>
         <!-- loptop -->
         <button id="laptopBtn" class="flex gap-2 mx-4 my-2 items-center">
@@ -185,7 +185,7 @@
                 d="M4.293 2.077H11.7c2.373 0 2.967.597 2.967 2.979v4.247c0 2.388-.594 2.978-2.96 2.978H4.293c-2.366.007-2.96-.59-2.96-2.972V5.056c0-2.382.594-2.979 2.96-2.979ZM8 12.288v3.207M1.333 9.457h13.334M5 15.495h6" />
             </svg>
           </span>
-          <span class="text-xs text-Slate-700">لپ تاپ</span>
+          <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">لپ تاپ</span>
         </button>
         <!-- smart watch -->
         <button id="smartWatchBtn" class="flex gap-2 mx-4 my-2 items-center">
@@ -203,14 +203,14 @@
             </svg>
 
           </span>
-          <span class="text-xs text-Slate-700">ساعت هوشمند</span>
+          <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">ساعت هوشمند</span>
         </button>
         <!-- filter -->
-        <p class="text-Orange-200 font-bold text-xl px-3">فیلتر</p>
+        <p class="text-Orange-200 font-bold text-lg px-3">فیلتر</p>
         <!-- brand -->
         <button class="FilterBtn flex justify-between gap-7 mx-4 my-3 items-center">
           <span class="flex items-center gap-2">
-            <span>
+            <span class=" transition-all duration-300 dark:bg-lite dark:p-2 dark:rounded-full">
               <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12.8334 14.048H1.16669C0.92752 14.048 0.729187 13.8484 0.729187 13.6078C0.729187 13.3671 0.92752 13.1675 1.16669 13.1675H12.8334C13.0725 13.1675 13.2709 13.3671 13.2709 13.6078C13.2709 13.8484 13.0725 14.048 12.8334 14.048Z"
@@ -229,11 +229,11 @@
                   fill="#222F5D" />
               </svg>
             </span>
-            <span class="text-xs text-Slate-700">برند محصول</span>
+            <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">برند محصول</span>
           </span>
-          <span class="chevrown rotate-180 mr-[6px]">
+          <span class="chevrown rotate-180 mr-[6px] transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none">
-              <path fill="#222F5D"
+              <path fill="#fff"
                 d="M2.21 9.317a.4.4 0 0 0 .287-.12L6.03 5.644a.664.664 0 0 1 .942 0l3.532 3.555a.407.407 0 1 0 .574-.578L7.545 5.066a1.478 1.478 0 0 0-2.09 0L1.923 8.62a.413.413 0 0 0 0 .578c.081.076.184.12.287.12Z" />
             </svg>
           </span>
@@ -243,31 +243,31 @@
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="apple" id="apple"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="" class="text-xs text-Slate-700">اپل</label>
+            <label for="" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">اپل</label>
           </div>
           <!-- samsung -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="samsung" id="samsung"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="samsung" class="text-xs text-Slate-700">سامسونگ</label>
+            <label for="samsung" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">سامسونگ</label>
           </div>
           <!-- xiaomi -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="xiaomi" id="xiaomi"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="xiaomi" class="text-xs text-Slate-700">شیائومی</label>
+            <label for="xiaomi" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">شیائومی</label>
           </div>
           <!-- hoawie -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="hoawie" id="hoawie"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="hoawie" class="text-xs text-Slate-700">هوآوی</label>
+            <label for="hoawie" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">هوآوی</label>
           </div>
         </section>
         <!-- color -->
         <button class="FilterBtn flex justify-between gap-7 mx-4 my-2 items-center">
           <span class="flex items-center gap-2">
-            <span>
+            <span class="transition-all duration-300 dark:bg-lite dark:p-2 dark:rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
                 <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
                   d="M5.833 2.625V10.5c0 .63-.256 1.208-.665 1.628l-.023.023a1.83 1.83 0 0 1-.163.146 2.041 2.041 0 0 1-.578.35c-.064.03-.128.053-.192.076-.228.076-.473.11-.712.11a2.48 2.48 0 0 1-.467-.046c-.075-.018-.151-.035-.227-.058a2.117 2.117 0 0 1-.268-.1c0-.005 0-.005-.006 0a2.946 2.946 0 0 1-.467-.285l-.006-.006a1.598 1.598 0 0 1-.21-.187c-.064-.07-.128-.14-.192-.216a2.94 2.94 0 0 1-.286-.466c.006-.006.006-.006 0-.006 0 0 0-.006-.006-.012-.035-.082-.064-.169-.093-.257-.024-.075-.041-.151-.059-.227a2.483 2.483 0 0 1-.046-.467V2.625c0-.875.583-1.458 1.458-1.458h1.75c.875 0 1.458.583 1.458 1.458Z" />
@@ -277,11 +277,11 @@
                   d="m10.716 6.586-1.581 1.58-3.967 3.961c.409-.42.665-.997.665-1.627V4.865l1.581-1.58c.618-.62 1.447-.62 2.065 0l1.237 1.236c.618.618.618 1.446 0 2.065ZM3.5 11.084a.583.583 0 1 0 0-1.167.583.583 0 0 0 0 1.167Z" />
               </svg>
             </span>
-            <span class="text-xs text-Slate-700">رنگ محصول</span>
+            <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">رنگ محصول</span>
           </span>
-          <span class="chevrown rotate-180 mr-2">
+          <span class="chevrown rotate-180 mr-2 transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none">
-              <path fill="#222F5D"
+              <path fill="#ffffff"
                 d="M2.21 9.317a.4.4 0 0 0 .287-.12L6.03 5.644a.664.664 0 0 1 .942 0l3.532 3.555a.407.407 0 1 0 .574-.578L7.545 5.066a1.478 1.478 0 0 0-2.09 0L1.923 8.62a.413.413 0 0 0 0 .578c.081.076.184.12.287.12Z" />
             </svg>
           </span>
@@ -291,43 +291,43 @@
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="red" id="red"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="red" class="text-xs text-Slate-700">قرمز</label>
+            <label for="red" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">قرمز</label>
           </div>
           <!-- blue -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="blue" id="blue"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="blue" class="text-xs text-Slate-700">آبی</label>
+            <label for="blue" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">آبی</label>
           </div>
           <!-- black -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="black" id="black"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="black" class="text-xs text-Slate-700">مشکی</label>
+            <label for="black" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">مشکی</label>
           </div>
           <!-- white -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="white" id="white"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="white" class="text-xs text-Slate-700">سفید</label>
+            <label for="white" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">سفید</label>
           </div>
           <!-- yellow -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="yellow" id="yellow"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="yellow" class="text-xs text-Slate-700">زرد</label>
+            <label for="yellow" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">زرد</label>
           </div>
           <!-- orange -->
           <div class="flex items-center gap-3 mx-5 my-3">
             <input type="checkbox" name="orange" id="orange"
               class="form-checkbox border border-Slate-800 rounded-md checked:bg-Orange-200">
-            <label for="orange" class="text-xs text-Slate-700">نارنجی</label>
+            <label for="orange" class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">نارنجی</label>
           </div>
         </section>
         <!-- range -->
         <button class="FilterBtn flex justify-between gap-7 mx-4 my-2 items-center">
           <span class="flex items-center gap-2">
-            <span>
+            <span class=" transition-all duration-300 dark:bg-lite dark:p-2 dark:rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none">
                 <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
                   d="M10.523 8.384c-.245.24-.385.584-.35.951.053.63.63 1.091 1.26 1.091h1.109v.694a2.198 2.198 0 0 1-2.194 2.194H3.652a2.198 2.198 0 0 1-2.194-2.194V7.194c0-1.207.986-2.193 2.194-2.193h6.696c1.208 0 2.194.986 2.194 2.193v.84h-1.179c-.326 0-.624.129-.84.35Z" />
@@ -335,11 +335,11 @@
                   d="M1.458 7.72V5.052c0-.694.426-1.312 1.074-1.557l4.631-1.75c.724-.274 1.5.262 1.5 1.038v2.217M13.16 8.63V9.83c0 .321-.257.584-.584.595h-1.143c-.63 0-1.208-.46-1.26-1.09a1.172 1.172 0 0 1 .35-.951c.216-.222.513-.35.84-.35h1.213a.599.599 0 0 1 .583.595ZM4.083 7.48h4.084" />
                 </svg>
             </span>
-            <span class="text-xs text-Slate-700">قیمت محصول</span>
+            <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">قیمت محصول</span>
           </span>
-          <span class="chevrown rotate-180">
+          <span class="chevrown rotate-180 transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none">
-              <path fill="#222F5D"
+              <path fill="#ffffff"
                 d="M2.21 9.317a.4.4 0 0 0 .287-.12L6.03 5.644a.664.664 0 0 1 .942 0l3.532 3.555a.407.407 0 1 0 .574-.578L7.545 5.066a1.478 1.478 0 0 0-2.09 0L1.923 8.62a.413.413 0 0 0 0 .578c.081.076.184.12.287.12Z" />
             </svg>
           </span>
@@ -348,17 +348,27 @@
           <input type="range" value="0" min="0" max="100"
             class="rangeSliderRange appearance-none h-1 rounded-md bg-lite outline-none w-full">
           <div class="flex justify-between  items-center my-2">
-            <span class="bg-Orange-200 text-lite text-center rounded-lg py-1 px-5">0</span>
-            <span class="rangeSliderValue bg-Orange-200 text-lite text-center rounded-lg py-1 px-5">0</span>
+            <span class="bg-Orange-200 text-lite text-center rounded-lg py-1 px-5">
+              <span>0</span><br>
+              <span class="text-xs">X1,000,000</span>
+            </span>
+            <span class="bg-Orange-200 text-lite text-center rounded-lg py-1 px-5">
+              <span class="rangeSliderValue">0</span><br>
+              <span class="text-xs">X1,000,000</span>
+            </span>
           </div>
+        </section>
+        <section class="w-full px-5 mt-10">
+          <button class="bg-Orange-200 text-lite w-full py-2 rounded-lg">اعمال فیلتر</button>
         </section>
       </section>
       <img src="/assets/images/img/Banner.png" alt="" class="my-5">
     </aside>
     <!-- main content -->
     <main class="col-span-12 md:col-span-8 xl:col-span-9 2xl:col-span-10">
-      <section class="bg-Stone-50 py-3 rounded-lg mb-4 flex justify-between px-5 md:hidden">
-        <div class="w-full">dark mode</div>
+      <!-- dark mode section -> mobile -->
+      <section class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 rounded-lg mb-4 flex justify-between px-5 md:hidden">
+        <div class="w-full transition-all duration-300 dark:text-lite text-xs">حالت شب</div>
         <!-- toggle -->
         <div class="flex items-center justify-center">
           <label for="toggleDarkMode" class="flex items-center cursor-pointer">
@@ -379,9 +389,10 @@
           </label>
         </div>
       </section>
-      <section class="bg-Stone-50 py-5 rounded-lg hidden md:grid grid-cols-4 xl:grid-cols-5 text-Gray-300 ">
+      <!-- main sort -->
+      <section class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-5 rounded-lg hidden md:grid grid-cols-2 lg:grid-cols-4 gap-3 xl:grid-cols-5 text-Gray-300">
         <button
-          class="bestsellingBtn filterBtn relative transition-all duration-300  mx-5 text-sm font-bold text-Slate-800">
+          class="bestsellingBtn filterBtn relative transition-all duration-300  mx-5 text-sm font-bold text-Slate-800 dark:text-lite">
           پرفروش ترین
           <span class="absolute badge bg-Orange-200 p-1 rounded-full"></span>
         </button>
@@ -398,8 +409,9 @@
           <span class="absolute badge bg-Orange-200 p-1 rounded-full hidden"></span>
         </button>
       </section>
+      <!-- product box -->
       <section id="productBox"
-        class="grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 pt-5">
+        class="grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 md:gap-5 pt-5">
         <!-- product cards -->
       </section>
     </main>
