@@ -9,8 +9,7 @@ mobileSearchBtn.addEventListener("click", () => {
 
 const productBox = document.querySelector("#productBox");
 
-var products = [
-  {
+var products = [{
     title: "ساعت هوشمند اپل سری ۸",
     image: "/assets/images/img/Cart/watch/watch8.png",
     category: "smartWatch",
@@ -238,24 +237,6 @@ for (let i = 0; i < FilterBtn.length; i++) {
   });
 }
 
-// range slider
-let slider = document.querySelector(".rangeSliderRange");
-let output = document.querySelector(".rangeSliderValue");
-
-output.innerHTML = slider.value;
-
-slider.oninput = function () {
-  output.innerHTML = this.value;
-
-  let value = ((this.value - this.min) / (this.max - this.min)) * 100;
-  this.style.background =
-    "linear-gradient(to left, #fdba74 1%, #FC5858 " +
-    value +
-    "%, #d7dcdf " +
-    value +
-    "%, #d7dcdf 100%)";
-};
-
 // main sort -> mostPopular
 const mostPopularBtn = document.querySelector(".mostPopularBtn");
 
@@ -327,3 +308,16 @@ for (let i = 0; i < mobileCategoryBtn.length; i++) {
     mobileCategoryTitle[i].classList.toggle("hidden");
   });
 }
+
+const filterMobileBtn = document.querySelector(".filterMobileBtn");
+const mobileFilterBox = document.querySelector("#mobileFilterBox");
+
+filterMobileBtn.addEventListener("click", () => {
+  mobileFilterBox.classList.replace("hidden", "block")
+})
+
+const mobileFilterCloseBtn = document.querySelector(".mobileFilterCloseBtn");
+
+mobileFilterCloseBtn.addEventListener("click", () => {
+  mobileFilterBox.classList.replace("block", "hidden")
+})
