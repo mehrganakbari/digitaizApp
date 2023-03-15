@@ -3,8 +3,8 @@ module.exports = {
   content: ["*.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      "white": "#ffffff",
-      "lite": "#E5E5E5",
+      white: "#ffffff",
+      lite: "#E5E5E5",
       "Orange-700": "#c2410c",
       "Orange-600": "#ea580c",
       "Orange-500": "#f97316",
