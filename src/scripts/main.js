@@ -342,26 +342,19 @@ var element = document.querySelector(".picture");
 let value = element.getBoundingClientRect().width / element.offsetWidth;
 
 let indexofArr = 4;
-function handleChange(){
-  let val = document.querySelector("#sel").value;
-  val = Number(val);
-  indexofArr = zoomArr.indexOf(val);
-  element.style["transform"] = `scale(${val})`;
-};
 
 var zoomIn = document.querySelector(".zoomIn");
 zoomIn.addEventListener("click", () => {
-  console.log("value of index zoomin is", indexofArr);
   if (indexofArr < zoomArr.length - 1) {
     indexofArr += 1;
     value = zoomArr[indexofArr];
+    document.querySelector("#sel").value = value;
     element.style["transform"] = `scale(${value})`;
   }
 });
   
 var zoomOut = document.querySelector(".zoomOut");
 zoomOut.addEventListener("click", () => {
-  console.log("value of index  zoom out is", indexofArr);
   if (indexofArr > 0) {
     indexofArr -= 1;
     value = zoomArr[indexofArr];
