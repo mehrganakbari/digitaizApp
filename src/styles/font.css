@@ -1,5 +1,9 @@
 @import url('https://v1.fontapi.ir/css/Yekan:400;700');
+@import url('https://fonts.cdnfonts.com/css/iranian-sans');
 
 .yekan {
     font-family: Yekan, sans-serif;
+}
+.iranSans {
+    font-family: 'Iranian Sans', sans-serif;
 }
