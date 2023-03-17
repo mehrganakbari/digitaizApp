@@ -9,8 +9,7 @@ mobileSearchBtn.addEventListener("click", () => {
 
 const productBox = document.querySelector("#productBox");
 
-var products = [
-  {
+var products = [{
     title: "ساعت هوشمند اپل سری ۸",
     image: "/assets/images/img/Cart/watch/watch8.png",
     category: "smartWatch",
@@ -149,62 +148,66 @@ var products = [
   },
 ];
 
-let cards = "";
+function AddProductToHTML(productss) {
+  let cards = "";
 
-products.forEach((products) => {
-  if (products.category == "mobile") {
-    let cardstemplate = `
-      <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
-          <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
-            <img src="${products.image}" alt="" class="w-48 mx-auto">
+  productss.forEach((products) => {
+    if (products.category == "mobile") {
+      let cardstemplate = `
+        <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
+            <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
+              <img src="${products.image}" alt="" class="w-48 mx-auto">
+            </div>
+            <div class="flex items-center justify-between w-full mb-4">
+            <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
+            <div class="flex items-center">
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
+            </div>
           </div>
-          <div class="flex items-center justify-between w-full mb-4">
-          <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
-          <div class="flex items-center">
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
-          </div>
+          <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
+          <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
+          <hr class="transition-all duration-300 dark:text-Slate-700">
+          <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
         </div>
-        <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
+      `;
+      cards += cardstemplate;
+    }
+    if (products.category == "laptop") {
+      let cardstemplate = `
+      <div class="index relative bg-Stone-50 transition-all duration-300 dark:bg-Slate-900  rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
+        <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700  rounded-xl pb-7 items-center">
+          <img src="${products.image}" alt="" class="w-48 mx-auto">
+        </div>
+        <div class="flex items-center justify-between w-full mb-4">
+            <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
+            <div class="flex items-center">
+            <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
+            </div>
+        </div>
+        <div class="text-Slate-800 text-xs mb-2 md:text-base transition-all duration-300 dark:text-lite">${products.title}</div>
         <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
-        <hr class="transition-all duration-300 dark:text-Slate-700">
+        <div class="w-full 2xl:absolute bottom-3">
+        <hr class="ml-4 transition-all duration-300 dark:text-Slate-700">
         <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
+        </div>
       </div>
-    `;
-    cards += cardstemplate;
-  }
-  if (products.category == "laptop") {
-    let cardstemplate = `
-    <div class="index relative bg-Stone-50 transition-all duration-300 dark:bg-Slate-900  rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
-      <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700  rounded-xl pb-7 items-center">
-        <img src="${products.image}" alt="" class="w-48 mx-auto">
-      </div>
-      <div class="flex items-center justify-between w-full mb-4">
-          <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
-          <div class="flex items-center">
-          <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
-            <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900  bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
-          </div>
-      </div>
-      <div class="text-Slate-800 text-xs mb-2 md:text-base transition-all duration-300 dark:text-lite">${products.title}</div>
-      <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
-      <div class="w-full 2xl:absolute bottom-3">
-      <hr class="ml-4 transition-all duration-300 dark:text-Slate-700">
-      <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
-      </div>
-    </div>
-    `;
-    cards += cardstemplate;
-  }
-});
+      `;
+      cards += cardstemplate;
+    }
+  });
 
-productBox.insertAdjacentHTML("beforeend", cards);
+  productBox.insertAdjacentHTML("beforeend", cards);
+}
+
+AddProductToHTML(products);
 
 // filter
 const filterBtn = document.querySelectorAll(".filterBtn");
@@ -238,57 +241,43 @@ for (let i = 0; i < FilterBtn.length; i++) {
   });
 }
 
-// main sort -> mostPopular
-const mostPopularBtn = document.querySelector(".mostPopularBtn");
-
-function comparatorStar(a, b) {
-  if (a.dataset.index < b.dataset.index) {
-    return -1;
-  }
-  if (a.dataset.index > b.dataset.index) {
-    return 1;
-  }
-  return 0;
-}
-// اینجا باگش رفع شد یه تیکه کدو دوباره نوشتم یه کم ایراد داشت
-mostPopularBtn.onclick = function () {
-  var products = document.querySelectorAll("[data-index]");
-  var productsArray = Array.from(products);
-  console.log(productsArray);
-  let sorted = productsArray.sort(comparatorStar);
-  console.log(sorted);
-
-  sorted.forEach((event) =>
-    document.querySelector("#productBox").appendChild(event)
-  );
+// base sort
+const bestsellingBtn = document.querySelector(".bestsellingBtn");
+bestsellingBtn.onclick = function () {
+  productBox.innerHTML = "";
+  AddProductToHTML(products);
 };
 
-// main sort -> bestselling
-// اینو باید چی کنم برگرده به حالت اول  بدون ریلود شدن پیج
 
-// main sort -> cheapest
-// این همو کدیه که کار نمیکنه
+// popular
+const mostPopularBtn = document.querySelector(".mostPopularBtn");
+mostPopularBtn.onclick = function () {
+  var productsArray = [...products];
+  let sorted = productsArray.sort((a, b) => a.star - b.star).reverse();
+
+  productBox.innerHTML = "";
+  AddProductToHTML(sorted);
+};
+
+// cheapest
 const cheapestBtn = document.querySelector(".cheapestBtn");
-
 cheapestBtn.onclick = function () {
-  function comparatorPrice(a, b) {
-    if (a.dataset.price < b.dataset.price) {
-      return 1;
-    }
-    if (a.dataset.price > b.dataset.price) {
-      return -1;
-    }
-    return 0;
-  }
+  var productsArray = [...products];
+  let sorted = productsArray.sort((a, b) => a.priceEng - b.priceEng);
 
-  mostPopularBtn.onclick = function () {
-    var products = document.querySelectorAll("[data-price]");
-    var productsArray = Array.from(products);
-    let sorted = productsArray.sort(comparatorPrice);
-    sorted.forEach((ev) =>
-      document.querySelector("#productBox").appendChild(ev)
-    );
-  };
+  productBox.innerHTML = "";
+  AddProductToHTML(sorted);
+};
+// ---------------------------------
+
+// Expensive
+const mostExpensiveBtn = document.querySelector(".mostExpensiveBtn");
+mostExpensiveBtn.onclick = function () {
+  var productsArray = [...products];
+  let sorted = productsArray.sort((a, b) => a.priceEng - b.priceEng).reverse();
+
+  productBox.innerHTML = "";
+  AddProductToHTML(sorted);
 };
 
 // dark mode
@@ -352,7 +341,7 @@ zoomIn.addEventListener("click", () => {
     element.style["transform"] = `scale(${value})`;
   }
 });
-  
+
 var zoomOut = document.querySelector(".zoomOut");
 zoomOut.addEventListener("click", () => {
   if (indexofArr > 0) {
