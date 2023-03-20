@@ -9,6 +9,7 @@ mobileSearchBtn.addEventListener("click", () => {
 
 const productBox = document.querySelector("#productBox");
 
+// products
 var products = [{
     title: "ساعت هوشمند اپل سری ۸",
     image: "/assets/images/img/Cart/watch/watch8.png",
@@ -148,6 +149,7 @@ var products = [{
   },
 ];
 
+// add product
 function AddProductToHTML(productss) {
   let cards = "";
 
@@ -268,7 +270,7 @@ cheapestBtn.onclick = function () {
   productBox.innerHTML = "";
   AddProductToHTML(sorted);
 };
-// ---------------------------------
+
 
 // Expensive
 const mostExpensiveBtn = document.querySelector(".mostExpensiveBtn");
@@ -287,18 +289,7 @@ toggleDarkModeBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
 });
 
-const mobileCategoryBtn = document.querySelectorAll(".mobileCategoryBtn");
-const mobileCategoryTitle = document.querySelectorAll(".mobileCategoryTitle");
-
-for (let i = 0; i < mobileCategoryBtn.length; i++) {
-  mobileCategoryBtn[i].addEventListener("click", () => {
-    for (let i = 0; i < mobileCategoryBtn.length; i++) {
-      mobileCategoryTitle[i].classList.add("hidden");
-    }
-    mobileCategoryTitle[i].classList.toggle("hidden");
-  });
-}
-
+// filter buttons
 const filterMobileBtn = document.querySelector(".filterMobileBtn");
 const mobileFilterBox = document.querySelector("#mobileFilterBox");
 
@@ -312,6 +303,7 @@ mobileFilterCloseBtn.addEventListener("click", () => {
   mobileFilterBox.classList.replace("block", "hidden");
 });
 
+// map section
 const mapBtn = document.querySelector(".mapBtn");
 const mapBox = document.querySelector(".mapBox");
 
@@ -325,6 +317,7 @@ mapCloseBtn.addEventListener("click", () => {
   mapBox.classList.replace("fixed", "hidden");
 });
 
+// map zoom
 let zoomArr = [0.5, 0.75, 0.85, 0.9, 1, 1.2, 1.5];
 
 var element = document.querySelector(".picture");

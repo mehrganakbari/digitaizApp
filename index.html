@@ -238,7 +238,7 @@
             </span>
             <span class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">برند محصول</span>
           </span>
-          <span class="chevrown rotate-180 mr-[6px] transition-all duration-300">
+          <span class="chevrown rotate-180 mr-[7px] transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none">
               <path fill="#fff"
                 d="M2.21 9.317a.4.4 0 0 0 .287-.12L6.03 5.644a.664.664 0 0 1 .942 0l3.532 3.555a.407.407 0 1 0 .574-.578L7.545 5.066a1.478 1.478 0 0 0-2.09 0L1.923 8.62a.413.413 0 0 0 0 .578c.081.076.184.12.287.12Z" />
@@ -434,43 +434,48 @@
         class="grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 md:gap-5 pt-5 mb-24">
         <!-- product cards -->
       </section>
-      <!-- mobileCategory -->
-      <section
-        class="md:hidden bg-Stone-100 transition-all duration-300 dark:bg-Slate-900 fixed bottom-0 left-0 right-0 py-3 px-5 flex justify-between">
-        <button class="mobileCategoryBtn text-Slate-800 transition-all duration-300 dark:text-lite">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
-            <path
-              d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-            <path
-              d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
-          </svg>
-          <span class="mobileCategoryTitle text-xs">خانه</span>
+    <!-- mobileCategory -->
+    <section
+        class="md:hidden bg-Stone-100 transition-all duration-300 dark:bg-Slate-900 fixed bottom-0 left-0 right-0 py-3 px-5 flex justify-between items-center">
+        <a href="/index.html">
+            <button class="text-Slate-800 transition-all duration-300 dark:text-lite">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
+                    <path
+                        d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                    <path
+                        d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                </svg>
+                <span class=" text-xs">خانه</span>
+            </button>
+        </a>
+        <a href="/category.html">
+            <button class="text-Slate-800 transition-all duration-300 dark:text-lite">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
+                    <path fill-rule="evenodd"
+                        d="M3 6a3 3 0 013-3h2.25a3 3 0 013 3v2.25a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm9.75 0a3 3 0 013-3H18a3 3 0 013 3v2.25a3 3 0 01-3 3h-2.25a3 3 0 01-3-3V6zM3 15.75a3 3 0 013-3h2.25a3 3 0 013 3V18a3 3 0 01-3 3H6a3 3 0 01-3-3v-2.25zm9.75 0a3 3 0 013-3H18a3 3 0 013 3V18a3 3 0 01-3 3h-2.25a3 3 0 01-3-3v-2.25z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span class=" text-xs hidden">دسته بندی</span>
+            </button>
+        </a>
+        <a href="/cart.html">
+            <button class="text-Slate-800 transition-all duration-300 dark:text-lite">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
+                    <path fill-rule="evenodd"
+                        d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span class="text-xs hidden">سبد خرید</span>
+            </button>
+        </a>
+        <button class="text-Slate-800 transition-all duration-300 dark:text-lite">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 mx-auto">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+            </svg>
         </button>
-        <button class="mobileCategoryBtn text-Slate-800 transition-all duration-300 dark:text-lite">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
-            <path fill-rule="evenodd"
-              d="M3 6a3 3 0 013-3h2.25a3 3 0 013 3v2.25a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm9.75 0a3 3 0 013-3H18a3 3 0 013 3v2.25a3 3 0 01-3 3h-2.25a3 3 0 01-3-3V6zM3 15.75a3 3 0 013-3h2.25a3 3 0 013 3V18a3 3 0 01-3 3H6a3 3 0 01-3-3v-2.25zm9.75 0a3 3 0 013-3H18a3 3 0 013 3V18a3 3 0 01-3 3h-2.25a3 3 0 01-3-3v-2.25z"
-              clip-rule="evenodd" />
-          </svg>
-          <span class="mobileCategoryTitle text-xs hidden">دسته بندی</span>
-        </button>
-        <button class="mobileCategoryBtn text-Slate-800 transition-all duration-300 dark:text-lite">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-auto">
-            <path fill-rule="evenodd"
-              d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
-              clip-rule="evenodd" />
-          </svg>
-          <span class="mobileCategoryTitle text-xs hidden">سبد خرید</span>
-        </button>
-        <button class="mobileCategoryBtn filterMobileBtn text-Slate-800 transition-all duration-300 dark:text-lite">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6 mx-auto">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
-          </svg>
-          <span class="mobileCategoryTitle text-xs hidden">فیلتر</span>
-        </button>
-      </section>
+    </section>
       <!-- filter section -> mobile -->
       <section id="mobileFilterBox"
         class="fixed top-0 left-0 bottom-0 right-0 bg-white h-screen dark:bg-Slate-900 bg-opacity-50 dark:bg-opacity-70 hidden">
