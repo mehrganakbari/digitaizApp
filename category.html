@@ -10,7 +10,7 @@
     <title>category</title>
 </head>
 
-<body class="yekan bg-lite transition-all duration-300 dark:bg-Slate-800 overflow-x-hidden">
+<body class="yekan bg-lite transition-all duration-300 dark:bg-Slate-800 overflow-x-hidden pb-20 md:hidden">
     <!-- navbar -->
     <nav class="pt-10 md:hidden">
         <!-- title -->
@@ -57,22 +57,33 @@
     </nav>
 
     <!-- mobile -->
-    <section class="grid grid-cols-3 gap-2 my-5">
-        <div class="col-span-1 px-5 py-3">
+    <section class="grid grid-cols-3 gap-2 mt-5 mb-2 items-center">
+        <div class="col-span-1 px-5 pt-3">
             <div class="bg-Gray-300 pt-5 text-center rounded-lg">
                 <p class="text-Slate-700 text-xs iranSans pb-3">تلفن همراه</p>
                 <img src="/assets/images/img/mobile.svg" class="w-full rounded-lg shadow-lg">
             </div>
         </div>
-        <div class="col-span-2 pl-5 py-3">
-            <div class="flex justify-end"><button class="text-xs text-Orange-200 text-end">مشاهده همه</button></div>
-            <div class="w-full flex gap-1 pt-3 overflow-x-scroll scrollbar-none">
-                <div class="py-5 px-7 bg-white rounded-xl shadow-lg">
-                    <!-- logo -->
-                    <img src="" alt="" class="w-8">
-                    <!-- title -->
+        <div class="col-span-2 pl-5 p-3">
+            <div class="flex justify-end"><button class="seeAll text-xs text-Orange-200 text-end">مشاهده همه</button>
+            </div>
+            <div class="w-full flex gap-1 pt-1 overflow-x-scroll scrollbar-none">
+                <a href="/mobile.html" class="py-5 px-7 flex flex-col justify-center bg-white rounded-xl shadow">
+                    <img src="/assets/images/img/apple.svg" alt="">
                     <p class="text-xs iranSans text-Slate-700 mt-2 text-center">اپل</p>
-                </div>
+                </a>
+                <a href="/unavailableProduct.html" class="py-5 px-7 flex flex-col justify-center bg-white rounded-xl shadow">
+                    <img src="/assets/images/img/image.svg" alt="">
+                    <p class="text-xs iranSans text-Slate-700 mt-2 text-center">شیائومی</p>
+                </a>
+                <a href="/unavailableProduct.html" class="py-5 px-7 flex flex-col justify-center bg-white rounded-xl shadow">
+                    <img src="/assets/images/img/asus.svg" alt="">
+                    <p class="text-xs iranSans text-Slate-700 mt-2 text-center">ایسوس</p>
+                </a>
+                <a href="/unavailableProduct.html" class="py-5 px-7 flex flex-col justify-center bg-white rounded-xl shadow">
+                    <img src="/assets/images/img/lenovo.svg" alt="">
+                    <p class="text-xs iranSans text-Slate-700 mt-2 text-center">لنوو</p>
+                </a>
             </div>
         </div>
     </section>
@@ -121,6 +132,7 @@
         </button>
     </section>
     <script type="module" src="/src/scripts/main.js"></script>
+    <script type="module" src="/src/scripts/category.js"></script>
 </body>
 
 </html>
