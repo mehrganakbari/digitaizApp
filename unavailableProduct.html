@@ -118,32 +118,14 @@
     <p class="max-w-xl min-w-[200px] text-xl xs:text-2xl text-center px-10 text-Slate-700 mx-auto">
       محصول مورد نظر شما در حال حاضر در دسترس نیست
     </p>
-  </section>
-  <!-- map -->
-  <section class="mapBox h-screen z-50 top-0 left-0 bottom-0 right-0 bg-Slate-900 bg-opacity-70 hidden">
-    <div class="relative w-full h-full">
-      <button class="mapCloseBtn absolute top-5 right-5"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-lite">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg></button>
-      <div class="absolute top-5 left-5 flex flex-col md:flex-row items-center gap-5 z-50">
-        <button class="zoomOut bg-Orange-200 text-white py-2 px-10 rounded">zoomOut</button>
-        <select id="sel" class="select bg-Orange-200 text-white py-1 px-10 rounded" onchange="handleChange()">
-          <option value=0.5>50%</option>
-          <option value=0.75>75%</option>
-          <option value=0.85>85%</option>
-          <option value=0.9>90%</option>
-          <option value=1 selected>100%</option>
-          <option value=1.2>120%</option>
-          <option value=1.5>150%</option>
-          <option value=1>reset</option>
-        </select>
-        <button class="zoomIn bg-Orange-200 text-white py-2 px-10 rounded">zoomIn</button>
-      </div>
-      <div
-        class="mainContainer flex justify-center w-2/4 py-[50%] md:py-0 md:translate-y-1/2 xl:translate-y-0 xl:py-[10vh] mx-auto">
-        <img src="/assets/images/img/Footer.jpg" alt="" class="picture transition-all duration-300 rounded-xl">
-      </div>
+    <div class="flex justify-center">
+      <a href="index.html" class="mt-5 flex justify-center gap-2 text-Indigo-600 border-b border-Orange-200">
+        <p>بازگشت به صفحه اصلی</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-5 h-7 text-Indigo-600">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+        </svg>
+      </a>
     </div>
   </section>
   <footer class="bg-white dark:bg-Slate-900 pt-10 pb-32 px-5 md:pb-10">
@@ -162,7 +144,7 @@
         </div>
         <p class="text-Slate-800 transition-all duration-300 dark:text-lite lg:w-3/4 mb-5 iranSans">
           دیجی‌ تایز عرضه کننده جدیدترین محصولات الکترونیک نظیر لپ تاپ، گوشی هوشمند و ساعت هوشمند می‌باشد.دیجی
-          تایز افتخار این را داشته که به <span class="text-Orange-200">۱۲۲,۲۳۲ نفر</span> تا به اکنونخدمت
+          تایز افتخار این را داشته که به <span class="text-Orange-200">۱۲۲,۲۳۲ نفر</span> تا به اکنون خدمت
           رسانی داشته باشد.
         </p>
         <div class="flex gap-2 items-center">
@@ -183,7 +165,8 @@
             </svg>
             <span class="text-Slate-800 text-md iranSans">ایمیل :</span>
           </span>
-          <span class="text-Slate-800 text-md transition-all duration-300 dark:text-lite iranSans">info@digitize.com</span>
+          <span
+            class="text-Slate-800 text-md transition-all duration-300 dark:text-lite iranSans">info@digitize.com</span>
         </div>
       </div>
       <div class="col-span-1 py-5 hidden xl:block">
@@ -197,7 +180,7 @@
                     d="M13 5.205v7.547c0 3.02-.75 3.774-3.75 3.774h-4.5c-3 0-3.75-.755-3.75-3.774V5.205c0-3.02.75-3.774 3.75-3.774h4.5c3 0 3.75.755 3.75 3.774ZM8.5 4.073h-3" />
                   <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
                     d="M7 14.337c.642 0 1.162-.524 1.162-1.17 0-.646-.52-1.17-1.162-1.17-.642 0-1.163.524-1.163 1.17 0 .646.52 1.17 1.163 1.17Z" />
-                  </svg></span>
+                </svg></span>
               <span class="iranSans">تلفن همراه</span>
             </li>
           </a>
@@ -207,7 +190,7 @@
               <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
                   <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round"
                     d="M4.293 2.077H11.7c2.373 0 2.967.597 2.967 2.979v4.247c0 2.388-.594 2.978-2.96 2.978H4.293c-2.366.007-2.96-.59-2.96-2.972V5.056c0-2.382.594-2.979 2.96-2.979ZM8 12.288v3.207M1.333 9.457h13.334M5 15.495h6" />
-                  </svg></span>
+                </svg></span>
               <span class="iranSans">لپ تاپ</span>
             </li>
           </a>
