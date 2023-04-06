@@ -7,13 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/font.css">
     <link rel="icon" type="image/svg+xml" href="/assets/images/image (1).svg">
-    <title>category</title>
+    <title>singleproduct</title>
 </head>
 
 <body class="yekan bg-lite transition-all duration-300 dark:bg-Slate-800 overflow-x-hidden pb-20">
-    
+    <!-- navbar -->
+    <header>
+        <!-- navbar -> desktop -->
+        <nav
+            class="fixed z-50 top-0 left-0 right-0 bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 shadow hidden md:block">
+            <div class="mx-auto container py-1 px-5 max-w-[1500px]">
+                <div class="flex justify-between items-center">
+                    <!-- logo -->
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="26" fill="none">
+                            <path fill="#222F5D"
+                                d="M8.744 1.41V5.42H4.732V1.41h4.012Zm1.941 11.569c.173 0 .259.086.259.259v4.503c0 .173-.086.259-.259.259H9.65c-.276 0-.475-.009-.595-.026-.087 1.208-.337 2.235-.751 3.08-.414.863-1.078 1.657-1.993 2.381-.897.725-2.157 1.484-3.779 2.278L.746 21.727c1.208-.725 2.054-1.311 2.537-1.76.483-.449.776-.889.88-1.32.12-.431.181-1.13.181-2.096V7.49h4.762v4.918c0 .173.044.311.13.414a.56.56 0 0 0 .414.156h1.035Zm8.672-.233a5.21 5.21 0 0 1-.699 2.64A5.43 5.43 0 0 1 16.77 17.3a5.12 5.12 0 0 1-2.64.699h-3.442c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h3.39a.497.497 0 0 0 .363-.155.527.527 0 0 0 .155-.388V6.767h4.762v5.979Zm.052 7.325v4.011h-8.024v-4.011h8.024ZM26.094 18a5.119 5.119 0 0 1-2.64-.699 5.43 5.43 0 0 1-1.89-1.915 5.21 5.21 0 0 1-.698-2.64V.322h4.762v12.113c0 .173.043.31.13.414.103.087.232.13.388.13h1.578c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-1.63ZM35.798.685v4.011h-8.024V.685h8.024Zm-4.763 6.082h4.763v5.979a5.21 5.21 0 0 1-.7 2.64A5.43 5.43 0 0 1 33.21 17.3a5.119 5.119 0 0 1-2.64.699h-2.846c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h2.795a.496.496 0 0 0 .362-.155.527.527 0 0 0 .155-.388V6.767Z" />
+                            <path fill="#FC5858"
+                                d="M56.737 12.979c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-.724c.034.31.051.544.051.699a5.567 5.567 0 0 1-.776 2.873 5.615 5.615 0 0 1-2.096 2.07 5.614 5.614 0 0 1-2.9.777h-6.108a6.878 6.878 0 0 1-3.545-.958 7.159 7.159 0 0 1-2.589-2.588 6.878 6.878 0 0 1-.957-3.546v-6.833h4.762v6.574c0 .639.224 1.182.673 1.63.466.467 1.018.7 1.656.7h6.186c.207 0 .38-.07.518-.207a.672.672 0 0 0 .207-.492.672.672 0 0 0-.207-.492.702.702 0 0 0-.518-.207h-5.668v-5.021h12.035ZM56.74 18c-.173 0-.259-.086-.259-.259v-4.503c0-.173.086-.26.259-.26h5.798c1.173 0 2.174-.361 3.002-1.086l2.045-1.812-2.977-1.45c-.241-.103-.431-.155-.57-.155-.31 0-.62.138-.93.414l-2.693 2.977-3.313-2.899 2.718-3.313c.552-.656 1.2-1.13 1.941-1.423a5.725 5.725 0 0 1 2.226-.466c.863 0 1.682.207 2.459.62l5.539 2.59a.597.597 0 0 0 .207.05h3.339v4.66h-3.313v.724c0 .173.043.311.13.414a.56.56 0 0 0 .413.156h3.236c.172 0 .258.086.258.259v4.503c0 .173-.086.259-.258.259H72.76c-1.018 0-1.855-.242-2.51-.725-.639-.5-1.165-1.225-1.58-2.174l-.517.518a9.264 9.264 0 0 1-2.925 1.786A9.664 9.664 0 0 1 61.89 18h-5.151Zm3.21 2.07h4.011v4.012h-4.012v-4.011Zm24.72-7.324a5.21 5.21 0 0 1-.698 2.64 5.43 5.43 0 0 1-1.89 1.915 5.12 5.12 0 0 1-2.64.699H76c-.172 0-.259-.086-.259-.259v-4.503c0-.173.087-.26.26-.26h3.39a.496.496 0 0 0 .362-.155.526.526 0 0 0 .155-.388V6.767h4.763v5.979Zm.053 7.325v4.011h-8.024v-4.011h8.024Zm8.315-7.092c.449 0 .673-.181.673-.544a.418.418 0 0 0-.155-.336c-.104-.104-.346-.285-.725-.544l-5.824-4.011 2.718-3.935 6.6 4.582c.707.552 1.242 1.138 1.605 1.76.362.62.543 1.397.543 2.329 0 1.087-.267 2.07-.802 2.95a5.62 5.62 0 0 1-2.122 2.045 6.073 6.073 0 0 1-2.925.725h-6.445v-5.021h6.859Z" />
+                        </svg>
+                    </div>
+                    <!-- links -->
+                    <ul class="flex gap-2 text-Slate-800 dark:text-lite text-sm">
+                        <button
+                            class="home px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">خانه</button>
+                        <button class="mobile px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">تلفن
+                            همراه</button>
+                        <button class="laptop px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">لپ
+                            تاپ</button>
+                        <button class=" px-5 py-2 rounded-lg transition-all duration-300 hover:bg-Gray-200">ساعت
+                            هوشمند</button>
+                    </ul>
+                    <!-- search box -->
+                    <div
+                        class="w-1/3 bg-Stone-100 px-3 py-2 rounded-lg border border-Gray-200 items-center hidden xl:flex">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none">
+                                <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13.417 24.5c6.12 0 11.083-4.962 11.083-11.083S19.538 2.333 13.417 2.333 2.333 7.296 2.333 13.417c0 6.121 4.963 11.083 11.084 11.083ZM25.667 25.667l-2.334-2.334" />
+                            </svg>
+                        </button>
+                        <input type="text" name="searchInput" id="searchInput"
+                            placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+                            class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:dark:text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
+                    </div>
+                </div>
+                <!-- search box -->
+                <div
+                    class="w-full bg-Stone-100 px-3 py-2 my-2 border border-Gray-200 rounded-lg flex items-center xl:hidden">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none">
+                            <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13.417 24.5c6.12 0 11.083-4.962 11.083-11.083S19.538 2.333 13.417 2.333 2.333 7.296 2.333 13.417c0 6.121 4.963 11.083 11.084 11.083ZM25.667 25.667l-2.334-2.334" />
+                        </svg>
+                    </button>
+                    <input type="text" name="searchInput" id="searchInput"
+                        placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+                        class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:dark:text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 focus:outline-none">
+                </div>
+            </div>
+        </nav>
+        <!-- navbar -> mobile -->
+        <nav class="pt-10 md:hidden">
+            <!-- title -->
+            <div class="px-5 flex justify-between items-center">
+                <!-- logo -->
+                <a href="/index.html" class="bg-Stone-50 p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+                <!-- title -->
+                <p class="home transition-all duration-300 dark:text-lite">گوشی موبایل آیفون ۱۳</p>
+                <!-- search button -->
+                <button class="mobileSearchBtn bg-Stone-50 p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                        <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9.583 17.5a7.917 7.917 0 1 0 0-15.833 7.917 7.917 0 0 0 0 15.833ZM18.333 18.333l-1.666-1.666" />
+                    </svg>
+                </button>
+            </div>
+            <!-- search box mobile -->
+            <div class="mobileSearchBox hidden">
+                <div class="mx-5 bg-Stone-100 px-3 py-2 my-2 border border-Gray-200 rounded-lg items-center flex">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none">
+                            <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13.417 24.5c6.12 0 11.083-4.962 11.083-11.083S19.538 2.333 13.417 2.333 2.333 7.296 2.333 13.417c0 6.121 4.963 11.083 11.084 11.083ZM25.667 25.667l-2.334-2.334" />
+                        </svg>
+                    </button>
+                    <input type="text" name="searchInput" id="searchInput"
+                        placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+                        class="w-full py-2 px-3 bg-Stone-100 text-xs text-Slate-700 placeholder:text-xs placeholder:text-Gray-300 placeholder:dark:text-Slate-700  dark:text-slate-7 focus:outline-none">
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="p-5 grid grid-cols-2 gap-2 justify-between">
+                <button
+                    class="col-span-2 xs:col-span-1 flex justify-center items-center gap-2 bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 rounded">
+                    <!-- icon -->
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="24" fill="none">
+                            <path stroke="#FC5858" stroke-linecap="round" stroke-width="1.5" d="M12 7h18" />
+                            <path stroke="#FC5858" stroke-linecap="round" stroke-width="1.5" d="M15 12h12"
+                                opacity=".34" />
+                            <path stroke="#FC5858" stroke-linecap="round" stroke-width="1.5" d="M19 17h4" />
+                            <path fill="#FC5858"
+                                d="M7 22.396a.433.433 0 0 1-.31-.129l-3.54-3.54a.44.44 0 0 1 0-.619.44.44 0 0 1 .618 0L7 21.34l3.232-3.232a.44.44 0 0 1 .618 0c.169.17.169.45 0 .619l-3.541 3.54a.433.433 0 0 1-.31.129Z" />
+                            <path fill="#FC5858"
+                                d="M7.063 21.604c-.274 0-.5-.334-.5-.736V4.34c0-.403.226-.737.5-.737.273 0 .5.334.5.736v16.527c0 .403-.227.737-.5.737Z" />
+                        </svg>
+                    </span>
+                    <!-- title -->
+                    <p class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite">محبوب‌ترین محصول</p>
+                </button>
+                <button
+                    class="col-span-2 xs:col-span-1 flex justify-center items-center gap-2 bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 rounded">
+                    <!-- icon -->
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                            <path stroke="#AFAFAF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                stroke-width="1.5"
+                                d="M5.4 2.1h13.2c1.1 0 2 .9 2 2v2.2c0 .8-.5 1.8-1 2.3l-4.3 3.8c-.6.5-1 1.5-1 2.3V19c0 .6-.4 1.4-.9 1.7l-1.4.9c-1.3.8-3.1-.1-3.1-1.7v-5.3c0-.7-.4-1.6-.8-2.1l-3.8-4c-.5-.5-.9-1.4-.9-2V4.2c0-1.2.9-2.1 2-2.1Z" />
+                            <path stroke="#AFAFAF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                stroke-width="1.5" d="M10.93 2.1 6 10" opacity=".4" /></svg>
+                    </span>
+                    <!-- title -->
+                    <p class="text-xs text-Slate-700 transition-all duration-300 dark:text-lite"> فیلتر : برند اپل</p>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    
+
     <script type="module" src="/src/scripts/main.js"></script>
     <script type="module" src="/src/scripts/singleproduct.js"></script>
 </body>
