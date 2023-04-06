@@ -15,7 +15,7 @@
     <header>
         <!-- navbar -> desktop -->
         <nav
-            class="fixed z-50 top-0 left-0 right-0 bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 py-3 shadow hidden md:block">
+            class="fixed z-50 top-0 left-0 right-0 bg-Stone-50 transition-all duration-300 py-3 shadow hidden md:block">
             <div class="mx-auto container py-1 px-5 max-w-[1500px]">
                 <div class="flex justify-between items-center">
                     <!-- logo -->
@@ -139,8 +139,27 @@
             </div>
         </nav>
     </header>
+    <!-- content -->
+    <section
+        class="md:mt-40 xl:mt-24 md:mb-7 grid grid-cols-12 md:gap-7 px-5 md:px-7 mx-auto container py-3 max-w-[1500px]">
 
-
+        <!-- sidebar -->
+        <aside class="hidden md:block col-span-4 xl:col-span-3 2xl:col-span-2">
+            <section
+                class="bg-Stone-50 py-5 rounded-lg mb-4 px-5">
+            </section>
+            <img src="/assets/images/img/Banner.png" alt="" class="my-5">
+            <section
+            class="bg-Stone-50 py-5 rounded-lg">
+        </aside>
+        <!-- main content -->
+        <main class="col-span-12 md:col-span-8 xl:col-span-9 2xl:col-span-10">
+            <section class="bg-Stone-50 py-5 rounded-lg hidden md:flex"></section>
+            <section
+                class="grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 md:gap-5 pt-5 mb-24">
+            </section>
+        </main>
+    </section>
     <script type="module" src="/src/scripts/main.js"></script>
     <script type="module" src="/src/scripts/singleproduct.js"></script>
 </body>
