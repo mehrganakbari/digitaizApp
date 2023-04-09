@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         category: resolve(__dirname, "category.html"),
+        singleproduct: resolve(__dirname, "singleproduct.html"),
         unavailableProduct: resolve(__dirname, "unavailableProduct.html"),
       },
     },
