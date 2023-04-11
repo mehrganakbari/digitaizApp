@@ -173,7 +173,7 @@ function AddProductToHTML(productss) {
           <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
           <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
           <hr class="transition-all duration-300 dark:text-Slate-700">
-          <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
+          <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg"><a href="/singleproduct.html">مشاهده و سفارش</a></button>
         </div>
       `;
       cards += cardstemplate;
@@ -198,7 +198,7 @@ function AddProductToHTML(productss) {
         <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
         <div class="w-full 2xl:absolute bottom-3">
         <hr class="ml-4 transition-all duration-300 dark:text-Slate-700">
-        <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg">مشاهده و سفارش</button>
+        <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg"><a href="/singleproduct.html">مشاهده و سفارش</a></button>
         </div>
       </div>
       `;
