@@ -184,7 +184,7 @@
         </aside>
         <!-- main content -->
         <main class="col-span-12 md:col-span-8 xl:col-span-9 2xl:col-span-10">
-            <section class="bg-Stone-50 py-5 rounded-lg hidden md:flex gap-3 px-5 items-center">
+            <section class="bg-Stone-50 py-5 rounded-lg hidden md:flex gap-y-5 px-5 items-center">
                 <a href="/index.html" class="text-xs text-Orange-200">خانه</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-3 h-3 text-Slate-800">
@@ -258,9 +258,9 @@
                             <p class="iranSans text-start">2G، 3G، 4G، 5G</p>
                         </div>
                     </div>
-                    <div class="px-5 hidden md:block">
+                    <div class="m-3 px-5 hidden md:block min-w-[220px] mx-auto">
                         <div class="px-5 py-3 bg-Gray-200 rounded-lg">
-                            <div class="flex my-3 gap-3 items-center">
+                            <div class="flex flex-col my-3 gap-3 items-center">
                                 <div class="flex items-center gap-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-Slate-800">
@@ -271,7 +271,7 @@
                                 </div>
                                 <p class="text-Slate-800 text-xs">دیجی‌تایز</p>
                             </div>
-                            <div class="flex my-3 gap-3 items-center">
+                            <div class="flex flex-col my-3 gap-3 items-center">
                                 <div class="flex items-center gap-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-Slate-800">
@@ -282,7 +282,7 @@
                                 </div>
                                 <p class="text-Slate-800 text-xs">۱۸ ماه زرین خدمت</p>
                             </div>
-                            <div class="flex my-3 gap-3 items-center">
+                            <div class="flex flex-col my-3 gap-3 items-center">
                                 <div class="flex items-center gap-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-Slate-800">
@@ -296,8 +296,8 @@
                                 <p class="text-Slate-800 text-xs">انبار تهران</p>
                             </div>
                             <p class="iranSans text-end mt-10 text-Orange-200">28,250,000 تومان</p>
-                            <button
-                                class="addToCart text-Stone-50 bg-Orange-200 py-2 w-full rounded-lg mt-4 transition-colors duration-300 hover:bg-Orange-100 hover:text-Orange-200">اضافه
+                            <button id="addToCartDesktop"
+                                class="text-Stone-50 bg-Orange-200 text-xs py-2 w-full rounded-lg mt-4 transition-colors duration-300 hover:bg-Orange-100 hover:text-Orange-200">اضافه
                                 به سبد خرید
                             </button>
                         </div>
@@ -380,6 +380,14 @@
                     ممکن مجددا بازیابی خواهد شد. البته قابلیت شارژ بی سیم ۱۵ وات با استفاده از مگ سیف نیز از دیگر ویژگی
                     های iPhone 13 Pro محسوب می شوند.
                 </p>
+            </section>
+            <section class="fixed bottom-0 right-0 left-0 bg-Stone-50  text-Orange-200 pt-4 pb-2 px-5 xs:grid grid-cols-2 items-center md:hidden z-50 border-t">
+                <p class="iranSans text-Orange-200 text-center xs:hidden">28,250,000 تومان</p>
+                <button id="addToCartMobile"
+                    class="text-Stone-50 bg-Orange-200 py-2 w-full rounded-lg mt-2 xs:mt-0 transition-colors duration-300 hover:bg-Orange-100 hover:text-Orange-200">اضافه
+                    به سبد خرید
+                </button>
+                <p class="iranSans text-Orange-200 text-center hidden xs:block">28,250,000 تومان</p>
             </section>
         </main>
     </section>
