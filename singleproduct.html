@@ -184,7 +184,7 @@
         </aside>
         <!-- main content -->
         <main class="col-span-12 md:col-span-8 xl:col-span-9 2xl:col-span-10">
-            <section class="bg-Stone-50 py-5 rounded-lg hidden md:flex gap-y-5 px-5 items-center">
+            <section class="bg-Stone-50 py-5 rounded-lg hidden md:flex gap-3 px-5 items-center">
                 <a href="/index.html" class="text-xs text-Orange-200">خانه</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-3 h-3 text-Slate-800">
@@ -206,7 +206,7 @@
                 <a href="/singleproduct.html" class="text-xs text-Slate-800">آیفون ۱۳</a>
             </section>
             <section class="mt-5 bg-Stone-50 py-5 mb-5 rounded-lg">
-                <div class="lg2:grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 px-5">
+                <div class="lg2:grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-5">
                     <div class="lg2:col-span-2 xl:col-span-1">
                         <img src="/assets/images/img/Single Product/Gallery.png" class="w-[300px] mx-auto" alt="">
                     </div>
@@ -327,7 +327,7 @@
                     </div>
                     <p class="iranSans text-start">2G، 3G، 4G، 5G</p>
                 </div>
-                <button id="moreInformationBox" class="mt-5 py-3 border-t border-Slate-800 w-full text-xs">مشخصات
+                <button id="openMoreInformationBox" class="mt-5 py-3 border-t border-Slate-800 w-full text-xs">مشخصات
                     بیشتر</button>
             </section>
             <section class="mt-5 bg-Stone-50 py-5 mb-5 rounded-lg">
@@ -381,13 +381,33 @@
                     های iPhone 13 Pro محسوب می شوند.
                 </p>
             </section>
-            <section class="fixed bottom-0 right-0 left-0 bg-Stone-50  text-Orange-200 pt-4 pb-2 px-5 xs:grid grid-cols-2 items-center md:hidden z-50 border-t">
+            <section
+                class="fixed bottom-0 right-0 left-0 bg-Stone-50  text-Orange-200 pt-4 pb-2 px-5 xs:grid grid-cols-2 items-center md:hidden z-40 border-t">
                 <p class="iranSans text-Orange-200 text-center xs:hidden">28,250,000 تومان</p>
                 <button id="addToCartMobile"
                     class="text-Stone-50 bg-Orange-200 py-2 w-full rounded-lg mt-2 xs:mt-0 transition-colors duration-300 hover:bg-Orange-100 hover:text-Orange-200">اضافه
                     به سبد خرید
                 </button>
                 <p class="iranSans text-Orange-200 text-center hidden xs:block">28,250,000 تومان</p>
+            </section>
+            <section id="moreInformationBox" class="fixed top-0 left-0 bottom-0 right-0 bg-white h-screen z-50">
+                <div class="w-full h-screen">
+                    <div class="h-[10vh] flex justify-between p-5 items-center shadow">
+                        <p class="text-Slate-800">مشخصات فنی</p>
+                        <!-- close btn -->
+                        <button id="closeMoreInformationBox"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 text-Slate-800">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg></button>
+                    </div>
+                    <section class="fixed bottom-0 w-full h-[90vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-Orange-200">
+                        <div class="flex justify-between gap-5 p-5 text-md text-Slate-700 border-b border-Slate-200">
+                            <p class="">ابعاد :</p>
+                            <p class="">۱۴۶.۷x۷۱.۵x۷.۶۵</p>
+                        </div>
+                    </section>
+                </div>
             </section>
         </main>
     </section>
