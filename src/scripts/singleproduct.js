@@ -25,8 +25,10 @@ closeMoreInformationBox.addEventListener("click", () => {
     moreInformationBox.classList.replace("fixed", "hidden");
 });
 
+const informationBox = document.querySelector("#informationBox");
+
 // informations
-var products = [{
+var informations = [{
         title: "ابعاد",
         answer: "۱۴۶.۷x۷۱.۵x۷.۶۵",
     },
@@ -117,63 +119,108 @@ var products = [{
         answer: "۳.۳۲ - ۱.۸۲ گیگاهرتز",
     },
     {
-        title: "",
-        answer: "",
+        title: "شبکه های ارتباطی",
+        answer: ["۲G", "۳G", "۴G", "۵G"],
     },
     {
-        title: "",
-        answer: "",
+        title: "پردازنده‌ی گرافیکی",
+        answer: "Apple GPU ۴-core graphics",
     },
     {
-        title: "",
-        answer: "",
+        title: "حافظه داخلی",
+        answer: "۱۲۸ گیگابایت",
     },
     {
-        title: "",
-        answer: "",
+        title: "مقدار RAM",
+        answer: "چهار گیگابایت",
     },
     {
-        title: "",
-        answer: "",
+        title: "فناوری‌های ارتباطی",
+        answer: ["GPRS", "NFC", "QZSS", "Wi-Fi", "بلوتوث", "A۲DP", "LE"],
     },
     {
-        title: "",
-        answer: "",
+        title: "فن‌آوری موبایل",
+        answer: ["A-GPS", "GLONASS", "GALILEO", "BDS"],
     },
     {
-        title: "",
-        answer: "",
+        title: "درگاه‌های ارتباطی",
+        answer: "Lightning",
     },
     {
-        title: "",
-        answer: "",
+        title: "نسخه بلوتوث",
+        answer: "۵.۰",
     },
     {
-        title: "",
-        answer: "",
+        title: "دوربین‌های پشت گوشی",
+        answer: "۲ ماژول دوربین",
     },
     {
-        title: "",
-        answer: "",
+        title: "رزولوشن عکس",
+        answer: "۱۲ مگاپیکسل",
     },
     {
-        title: "",
-        answer: "",
+        title: "فناوری فوکوس",
+        answer: "AutoFocus",
     },
     {
-        title: "",
-        answer: "",
+        title: "فلش",
+        answer: "Dual LED Dual Tone",
     },
     {
-        title: "",
-        answer: "",
+        title: "دسته ‌بندی",
+        answer: "پرچم‌دار",
     },
     {
-        title: "",
-        answer: "",
+        title: "سیستم عامل",
+        answer: "iOS",
     },
     {
-        title: "",
-        answer: "",
+        title: "نسخه سیستم عامل",
+        answer: "iOS ۱۵",
+    },
+    {
+        title: "حس‌گرها",
+        answer: [
+            "قطب‌نما",
+            "شتاب‌سنج",
+            "مجاورت",
+            "فشارسنج",
+            "ژیروسکوپ",
+            "تشخیص چهره بیومتریک",
+        ],
+    },
+    {
+        title: "مشخصات باتری",
+        answer: "باتری لیتیوم پلیمر با میزان ظرفیت ۳۲۴۰ قابلیت شارژ سریع با توان ۲۳ وات دارای فناوری USB Power Delivery ۲.۰ دارای قابلیت شارژ بی‌سیم (وایرلس) با توان ۱۵ وات (MagSafe wireless charging ۱۵W) دارای قابلیت شارژ سریع بی‌سیم (وایرلس) Qi magnetic با توان ۷.۵ وات شارژ شدن تا ۵۰ درصد در ۳۰ دقیقه پخش مداوم موزیک با شارژ ۱۰۰ درصد باتری تا ۵۵ ساعت پخش مداوم مالتی‌مدیا با شارژ ۱۰۰ درصد باتری تا ۱۷ ساعت ۲.۵ ساعت شارژ بیشتر نسبت به نسخه ۱۲",
     },
 ];
+
+// add product
+function AddProductToHTML(informations) {
+    let info = "";
+
+    informations.forEach((information) => {
+        let infotemplate = `
+        <div class="grid grid-cols-4 gap-5 p-5 text-xs lg2:text-md text-Slate-700 border-b border-Slate-200 items-center">
+            <p class="col-span-2 lg2:col-span-1">${information.title}</p>
+            <p class="col-span-2 lg2:col-span-3 iranSans">${information.answer}</p>
+        </div>
+        `;
+        info += infotemplate;
+
+        // if (informations.answer == Array) {
+        //     let infotemplate = `
+        // <div class="grid grid-cols-4 gap-5 p-5 text-md text-Slate-700 border-b border-Slate-200 items-center">
+        //     <p class="col-span-1">${information.title}</p>
+        //     <p class="col-span-3 iranSans">${information.answer}</p>
+        // </div>
+        // `;
+        //     info += infotemplate;
+        // }
+
+    });
+
+    informationBox.insertAdjacentHTML("beforeend", info);
+}
+
+AddProductToHTML(informations);
