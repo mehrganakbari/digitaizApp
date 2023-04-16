@@ -16,6 +16,7 @@ export default defineConfig({
         category: resolve(__dirname, "category.html"),
         singleproduct: resolve(__dirname, "singleproduct.html"),
         unavailableProduct: resolve(__dirname, "unavailableProduct.html"),
+        cart: resolve(__dirname, "cart.html"),
       },
     },
   },

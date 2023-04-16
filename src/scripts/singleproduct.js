@@ -212,7 +212,6 @@ function AddProductToHTML(informations) {
             `;
       info += infotemplate;
     } else {
-      // console.log("is a object")
       let infotemplate = `
             <div class="grid grid-cols-4 gap-5 p-5 text-xs lg2:text-md text-Slate-700 border-b border-Slate-200">
                 <p class="col-span-2 lg2:col-span-1">${information.title}</p>
