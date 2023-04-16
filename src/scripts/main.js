@@ -230,6 +230,19 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
+// filterBtn.forEach(i => {
+//   filterBtn.forEach(i => {
+//     filterBtn[i].classList.remove("text-Slate-800");
+//       filterBtn[i].classList.remove("dark:text-lite");
+//       filterBtn[i].classList.remove("font-bold");
+//       badge[i].classList.add("hidden");
+//   })
+//   filterBtn[i].classList.toggle("font-bold");
+//   filterBtn[i].classList.toggle("text-Slate-800");
+//   filterBtn[i].classList.toggle("dark:text-lite");
+//   badge[i].classList.toggle("hidden");
+// })
+
 const FilterBtn = document.querySelectorAll(".FilterBtn");
 const filterItems = document.querySelectorAll(".filterItems");
 const chevrown = document.querySelectorAll(".chevrown");
@@ -344,3 +357,5 @@ zoomOut.addEventListener("click", () => {
     element.style["transform"] = `scale(${value})`;
   }
 });
+
+
