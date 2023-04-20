@@ -344,5 +344,3 @@ zoomOut.addEventListener("click", () => {
     element.style["transform"] = `scale(${value})`;
   }
 });
-
-

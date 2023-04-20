@@ -11,61 +11,21 @@ const productBox = document.querySelector("#productBox");
 
 // products
 var products = [{
-        title: " گوشی موبایل آیفون ۱۳",
-        image: "/assets/images/img/Cart/mobile/1.png",
-        category: "mobile",
-        price: "۵۸,۳۵۰,۰۰۰",
-        priceEng: 58350000,
+        title: "مک بوک پرو ۲۰۲۲",
+        image: "/assets/images/img/Cart/laptop/macpro.png",
+        category: "laptop",
+        price: "۷۸,۷۵۰,۰۰۰",
+        priceEng: 78750000,
         star: 5,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
-
     {
-        title: "گوشی موبایل آیفون ۱۲ پرو",
-        image: "/assets/images/img/Cart/mobile/2.png",
-        category: "mobile",
-        price: "۴۶,۶۶۰,۰۰۰",
-        priceEng: 46660000,
-        star: 4.5,
-        colors: ["red", "white", "yellow", "purple", "orange"],
-    },
-
-    {
-        title: "  گوشی موبایل آیفون ۱۳",
-        image: "/assets/images/img/Cart/mobile/3.png",
-        category: "mobile",
-        price: "۵۸,۶۱۰,۰۰۰",
-        priceEng: 58610000,
-        star: 4,
-        colors: ["red", "white", "yellow", "purple", "orange"],
-    },
-
-    {
-        title: " گوشی موبایل آیفون ۱۲",
-        image: "/assets/images/img/Cart/mobile/4.png",
-        category: "mobile",
-        price: "۴۰,۱۵۰,۰۰۰",
-        priceEng: 40150000,
-        star: 4.5,
-        colors: ["red", "white", "yellow", "purple", "orange"],
-    },
-    {
-        title: "۱۱ گوشی موبایل آیفون",
-        image: "/assets/images/img/Cart/mobile/5.png",
-        category: "mobile",
-        price: "۳۸,۰۰۰,۰۰۰",
-        priceEng: 38000000,
-        star: 4,
-        colors: ["red", "white", "yellow", "purple", "orange"],
-    },
-
-    {
-        title: "۱۱ گوشی موبایل آیفون",
-        image: "/assets/images/img/Cart/mobile/6.png",
-        category: "mobile",
-        price: "۳۶,۰۰۰,۰۰۰",
-        priceEng: 36000000,
-        star: 3.5,
+        title: "مک بوک ام ۱۱ ایر",
+        image: "/assets/images/img/Cart/laptop/macm11.png",
+        category: "laptop",
+        price: "۱۱۰,۹۹۰,۰۰۰",
+        priceEng: 110990000,
+        star: 5,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
 ];
