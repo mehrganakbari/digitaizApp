@@ -12,7 +12,7 @@ const productBox = document.querySelector("#productBox");
 // products
 var products = [{
     title: "ساعت هوشمند اپل سری ۸",
-    image: "/assets/images/img/Cart/watch/watch8.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۱۹,۹۰۰,۰۰۰",
     priceEng: 199000000,
@@ -22,7 +22,7 @@ var products = [{
 
   {
     title: "ساعت هوشمند اپل سری ۷	",
-    image: "/assets/images/img/Cart/watch/watch7.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۱۴,۶۹۹,۰۰۰",
     priceEng: 14699000,
@@ -32,7 +32,7 @@ var products = [{
 
   {
     title: "ساعت هوشمند اپل سری ۶",
-    image: "/assets/images/img/Cart/watch/watch6.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۱۴,۳۰۰,۰۰۰",
     priceEng: 14300000,
@@ -42,7 +42,7 @@ var products = [{
 
   {
     title: "ساعت هوشمند اپل سری ۵",
-    image: "/assets/images/img/Cart/watch/watch5.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۱۳,۷۹۰,۰۰۰",
     priceEng: 13790000,
@@ -52,7 +52,7 @@ var products = [{
 
   {
     title: "ساعت هوشمند اپل سری ۴",
-    image: "/assets/images/img/Cart/watch/watch4.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۱۲,۹۹۹,۰۰۰",
     priceEng: 12999000,
@@ -62,7 +62,7 @@ var products = [{
 
   {
     title: "ساعت هوشمند اپل سری ۳",
-    image: "/assets/images/img/Cart/watch/watch3.png",
+    image: "/assets/images/img/watch.svg",
     category: "smartWatch",
     price: "۹,۳۹۰,۰۰۰",
     priceEng: 9390000,
@@ -154,7 +154,31 @@ function AddProductToHTML(productss) {
   let cards = "";
 
   productss.forEach((products) => {
-    if (products.category == "mobile") {
+    if(products.category == "smartWatch"){
+      let cardstemplate = `
+        <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
+            <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
+              <img src="${products.image}" alt="" class="w-32 mx-auto">
+            </div>
+            <div class="flex items-center justify-between w-full mb-4">
+            <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
+            <div class="flex items-center">
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 transition-all duration-300 dark:border-lite border-Gray-500 bg-Stone-50 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-500 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Yellow-400 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Indigo-600 -mr-1.5 flex items-center justify-center"></div>
+              <div class="w-5 h-5 rounded-full cursor-pointer border-2 border-Stone-50 transition-all duration-300 dark:border-Slate-900 bg-Orange-700 -mr-1.5 flex items-center justify-center"></div>
+            </div>
+          </div>
+          <div class="text-Slate-800 transition-all duration-300 dark:text-lite text-xs mb-2 md:text-base">${products.title}</div>
+          <div class="text-[#DE3618] font-bold text-left text-xs mt-2 mb-3">${products.price} تومان</div>
+          <hr class="transition-all duration-300 dark:text-Slate-700">
+          <button class="w-full font-bold text-Orange-600 mt-2 md:text-lg"><a href="/singleproduct.html">مشاهده و سفارش</a></button>
+        </div>
+      `;
+      cards += cardstemplate;
+    }
+    else if (products.category == "mobile") {
       let cardstemplate = `
         <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
             <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
