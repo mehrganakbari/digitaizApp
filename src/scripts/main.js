@@ -89,7 +89,6 @@ var products = [{
     star: 4.5,
     colors: ["red", "white", "yellow", "purple", "orange"],
   },
-
   {
     title: "  گوشی موبایل آیفون ۱۳",
     image: "/assets/images/img/Cart/mobile/3.png",
@@ -99,6 +98,7 @@ var products = [{
     star: 4,
     colors: ["red", "white", "yellow", "purple", "orange"],
   },
+
 
   {
     title: " گوشی موبایل آیفون ۱۲",
@@ -154,7 +154,7 @@ function AddProductToHTML(productss) {
   let cards = "";
 
   productss.forEach((products) => {
-    if(products.category == "smartWatch"){
+    if (products.category == "smartWatch") {
       let cardstemplate = `
         <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
             <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
@@ -177,8 +177,7 @@ function AddProductToHTML(productss) {
         </div>
       `;
       cards += cardstemplate;
-    }
-    else if (products.category == "mobile") {
+    } else if (products.category == "mobile") {
       let cardstemplate = `
         <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
             <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">

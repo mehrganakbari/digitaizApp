@@ -11,61 +11,62 @@ const productBox = document.querySelector("#productBox");
 
 // products
 var products = [{
-        title: " گوشی موبایل آیفون ۱۳",
-        image: "/assets/images/img/Cart/mobile/1.png",
-        category: "mobile",
-        price: "۵۸,۳۵۰,۰۰۰",
-        priceEng: 58350000,
+        title: "ساعت هوشمند اپل سری ۸",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۱۹,۹۰۰,۰۰۰",
+        priceEng: 199000000,
+        star: 3,
+        colors: ["red", "white", "yellow", "purple", "orange"],
+    },
+
+    {
+        title: "ساعت هوشمند اپل سری ۷	",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۱۴,۶۹۹,۰۰۰",
+        priceEng: 14699000,
         star: 5,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
 
     {
-        title: "گوشی موبایل آیفون ۱۲ پرو",
-        image: "/assets/images/img/Cart/mobile/2.png",
-        category: "mobile",
-        price: "۴۶,۶۶۰,۰۰۰",
-        priceEng: 46660000,
-        star: 4.5,
-        colors: ["red", "white", "yellow", "purple", "orange"],
-    },
-
-    {
-        title: "  گوشی موبایل آیفون ۱۳",
-        image: "/assets/images/img/Cart/mobile/3.png",
-        category: "mobile",
-        price: "۵۸,۶۱۰,۰۰۰",
-        priceEng: 58610000,
+        title: "ساعت هوشمند اپل سری ۶",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۱۴,۳۰۰,۰۰۰",
+        priceEng: 14300000,
         star: 4,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
 
     {
-        title: " گوشی موبایل آیفون ۱۲",
-        image: "/assets/images/img/Cart/mobile/4.png",
-        category: "mobile",
-        price: "۴۰,۱۵۰,۰۰۰",
-        priceEng: 40150000,
-        star: 4.5,
+        title: "ساعت هوشمند اپل سری ۵",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۱۳,۷۹۰,۰۰۰",
+        priceEng: 13790000,
+        star: 3,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
+
     {
-        title: "۱۱ گوشی موبایل آیفون",
-        image: "/assets/images/img/Cart/mobile/5.png",
-        category: "mobile",
-        price: "۳۸,۰۰۰,۰۰۰",
-        priceEng: 38000000,
+        title: "ساعت هوشمند اپل سری ۴",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۱۲,۹۹۹,۰۰۰",
+        priceEng: 12999000,
         star: 4,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
 
     {
-        title: "۱۱ گوشی موبایل آیفون",
-        image: "/assets/images/img/Cart/mobile/6.png",
-        category: "mobile",
-        price: "۳۶,۰۰۰,۰۰۰",
-        priceEng: 36000000,
-        star: 3.5,
+        title: "ساعت هوشمند اپل سری ۳",
+        image: "/assets/images/img/watch.svg",
+        category: "smartWatch",
+        price: "۹,۳۹۰,۰۰۰",
+        priceEng: 9390000,
+        star: 2,
         colors: ["red", "white", "yellow", "purple", "orange"],
     },
 ];
@@ -78,7 +79,7 @@ function AddProductToHTML(productss) {
         let cardstemplate = `
         <div class="bg-Stone-50 transition-all duration-300 dark:bg-Slate-900 rounded-xl p-2 shadow" data-price="${products.priceEng}" data-index="${products.star}">
             <div class="mb-6 bg-Gray-200 transition-all duration-300 dark:bg-Slate-700 rounded-xl pb-7 items-center">
-              <img src="${products.image}" alt="" class="w-48 mx-auto">
+              <img src="${products.image}" alt="" class="w-32 mx-auto">
             </div>
             <div class="flex items-center justify-between w-full mb-4">
             <span class="text-Slate-700 transition-all duration-300 dark:text-lite text-xs">اپل</span>
@@ -143,6 +144,7 @@ bestsellingBtn.onclick = function () {
     AddProductToHTML(products);
 };
 
+
 // popular
 const mostPopularBtn = document.querySelector(".mostPopularBtn");
 mostPopularBtn.onclick = function () {
@@ -162,6 +164,7 @@ cheapestBtn.onclick = function () {
     productBox.innerHTML = "";
     AddProductToHTML(sorted);
 };
+
 
 // Expensive
 const mostExpensiveBtn = document.querySelector(".mostExpensiveBtn");
