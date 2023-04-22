@@ -1,9 +1,6 @@
-// window.onload(
-//     alert("این سایت صرفا یک پروژه فرانت اند است و این صفحه کاملا نمایشی است.")
-// )
-
-const productsBox = document.querySelector("#productsBox");
-
+window.onload(
+    alert("این سایت صرفا یک پروژه فرانت اند است و این صفحه کاملا نمایشی است.")
+)
 
 var resultEl = document.querySelector(".resultSet"),
     plusMinusWidgets = document.querySelectorAll(".v-counter");
@@ -60,3 +57,11 @@ for (let i = 0; i < prodCloseBtn.length; i++) {
     });
 }
 
+const cancelBayBtn = document.querySelector("#cancelBay")
+const productsBox = document.querySelector(".productsBox")
+const priceInfos = document.querySelector(".priceInfos")
+
+cancelBayBtn.addEventListener("click", () => {
+    productsBox.classList.toggle("hidden");
+    priceInfos.classList.toggle("hidden");
+});
