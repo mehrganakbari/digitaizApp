@@ -59,3 +59,4 @@ for (let i = 0; i < prodCloseBtn.length; i++) {
         productBox[i].classList.toggle("hidden");
     });
 }
+
